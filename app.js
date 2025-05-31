@@ -6,8 +6,10 @@ const app = express();
 app.use(express.json());
 
 const authRoutes = require('./routes/authRoutes')
+const transactionRoutes = require('./routes/transactionRoutes')
 
 app.use(authRoutes);
+app.use(transactionRoutes);
 
 // Set up Global configuration access
 dotenv.config();

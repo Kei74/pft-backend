@@ -14,4 +14,8 @@ app.use(transactionRoutes);
 // Set up Global configuration access
 dotenv.config();
 
+app.get('/status', (req, res) => {
+	res.send("Server running");
+});
+
 module.exports = app;

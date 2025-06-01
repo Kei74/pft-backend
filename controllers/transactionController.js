@@ -2,7 +2,7 @@ const Transaction = require('../models/transaction');
 
 
 async function postTransaction(req, res) {
-	const { category, amount } = req.params;
+	const { category, amount } = req.body;
 	if (!category || !amount) {
 		res.status(400).send("Missing category or amount");
 		return;
